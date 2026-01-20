@@ -1,0 +1,13 @@
+/workspaces/vecdb/cmake-build/CMakeFiles/edit_cache.dir
+/workspaces/vecdb/cmake-build/CMakeFiles/rebuild_cache.dir
+/workspaces/vecdb/cmake-build/CMakeFiles/list_install_components.dir
+/workspaces/vecdb/cmake-build/CMakeFiles/install.dir
+/workspaces/vecdb/cmake-build/CMakeFiles/install/local.dir
+/workspaces/vecdb/cmake-build/CMakeFiles/install/strip.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/_hnsw_cpp.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/edit_cache.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/rebuild_cache.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/list_install_components.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/install.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/install/local.dir
+/workspaces/vecdb/cmake-build/src/cpp/CMakeFiles/install/strip.dir

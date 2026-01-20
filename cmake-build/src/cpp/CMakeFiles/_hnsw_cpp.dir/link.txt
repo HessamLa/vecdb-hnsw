@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -flto=auto -shared  -o ../../../src/python/vecdb/_hnsw_cpp.cpython-311-x86_64-linux-gnu.so CMakeFiles/_hnsw_cpp.dir/bindings.cpp.o 
