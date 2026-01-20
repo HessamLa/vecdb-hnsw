@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+src/python/vecdb/__init__.py
+src/python/vecdb/_version.py
+src/python/vecdb.egg-info/PKG-INFO
+src/python/vecdb.egg-info/SOURCES.txt
+src/python/vecdb.egg-info/dependency_links.txt
+src/python/vecdb.egg-info/not-zip-safe
+src/python/vecdb.egg-info/requires.txt
+src/python/vecdb.egg-info/top_level.txt

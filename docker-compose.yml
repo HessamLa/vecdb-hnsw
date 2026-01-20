@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  vecdb-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vecdb-dev-container
+
+    # Keep container running
+    tty: true
+    stdin_open: true
+
+    # Mount the project directory
+    volumes:
+      # Main project mount - changes sync bidirectionally
+      - .:/workspaces/vecdb:cached
+
+      # Persist bash history
+      - vecdb-bash-history:/home/vscode/.bash_history_dir
+
+      # Cache pip packages between rebuilds
+      - vecdb-pip-cache:/home/vscode/.cache/pip
+
+      # Cache CMake build artifacts (optional, for faster rebuilds)
+      - vecdb-build-cache:/workspaces/vecdb/build
+
+    # Environment variables
+    environment:
+      - PYTHONPATH=/workspaces/vecdb/src/python
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+
+    # Working directory
+    working_dir: /workspaces/vecdb
+
+    # Resource limits (adjust as needed)
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
+
+    # Network configuration
+    networks:
+      - vecdb-network
+
+networks:
+  vecdb-network:
+    driver: bridge
+
+volumes:
+  vecdb-bash-history:
+  vecdb-pip-cache:
+  vecdb-build-cache:

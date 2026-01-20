@@ -1,0 +1,72 @@
+Metadata-Version: 2.4
+Name: vecdb
+Version: 0.1.0
+Summary: Minimal Viable Vector Database with HNSW indexing
+Home-page: https://github.com/your-org/vecdb
+Author: VecDB Team
+License: MIT
+Project-URL: Homepage, https://github.com/your-org/vecdb
+Project-URL: Documentation, https://github.com/your-org/vecdb#readme
+Project-URL: Repository, https://github.com/your-org/vecdb
+Project-URL: Issues, https://github.com/your-org/vecdb/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: C++
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Dynamic: home-page
+Dynamic: requires-python
+
+# VecDB
+
+Minimal Viable Vector Database with HNSW indexing.
+
+## Quick Start
+
+```python
+from vecdb import VecDB
+
+# Create database
+with VecDB('./my_database') as db:
+    # Create collection
+    collection = db.create_collection(
+        name='embeddings',
+        dimension=384,
+        metric='cosine'
+    )
+    
+    # Insert vectors
+    collection.insert(user_id=1, vector=[0.1, 0.2, ...])
+    
+    # Search
+    results = collection.search(query=[0.15, 0.25, ...], k=5)
+```
+
+## Development Setup
+
+See [docs/SETUP.md](docs/SETUP.md) for development environment setup.
+
+## Documentation
+
+- [Product Requirements](docs/PRD.md)
+- [Development Orchestration](docs/ORCHESTRATION.md)
+- [Setup Guide](docs/SETUP.md)
+
+## License
+
+MIT

@@ -1,0 +1,21 @@
+# VecDB Development Dependencies
+# Install with: pip install -r requirements-dev.txt
+
+# Include runtime dependencies
+-r requirements.txt
+
+# Testing
+pytest>=7.0
+pytest-cov>=4.0
+pytest-xdist
+
+# Code formatting
+black
+isort
+
+# Type checking
+mypy
+
+# pybind11 for C++ bindings
+pybind11>=2.10
+pybind11-stubgen

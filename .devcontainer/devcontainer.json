@@ -1,0 +1,49 @@
+{
+    "name": "VecDB Development",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "vecdb-dev",
+    "workspaceFolder": "/workspaces/vecdb",
+
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "python.defaultInterpreterPath": "/usr/bin/python3",
+                "python.analysis.typeCheckingMode": "basic",
+                "editor.formatOnSave": true,
+                "editor.tabSize": 4,
+                "files.trimTrailingWhitespace": true,
+                "files.insertFinalNewline": true,
+                "C_Cpp.default.cppStandard": "c++17",
+                "C_Cpp.default.compilerPath": "/usr/bin/g++",
+                "cmake.configureOnOpen": false
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "ms-azuretools.vscode-docker",
+                "eamodio.gitlens",
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+
+    "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+    "remoteUser": "vscode",
+
+    "mounts": [],
+
+    "forwardPorts": [],
+
+    "containerEnv": {
+        "PYTHONPATH": "/workspaces/vecdb/src/python"
+    }
+}
