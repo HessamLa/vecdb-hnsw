@@ -51,7 +51,9 @@ def fake_embedding(text: str, dim: int = 64) -> list:
 
 
 def main():
-    print("Text Embedding Search Demo")
+    print("Text Embedding (simulated) Search Demo")
+    print("!!!!!!!!!!!!!!!!!! IMPORTANT !!!!!!!!!!!!!!!!!!!")
+    print("!! The embeddings are generated using hashing !!")
     print("=" * 50)
 
     # Create database with cosine metric (standard for embeddings)
